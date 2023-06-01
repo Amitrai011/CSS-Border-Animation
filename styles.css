@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --app-color: #82ccdd;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(24, 24, 24);
+}
+
+div {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 16px 14px 20px rgb(14, 14, 14);
+}
+
+div::before {
+  content: "";
+  width: 150%;
+  height: 150%;
+  position: absolute;
+  animation: rotate 2.01s linear infinite;
+  background-image: conic-gradient(var(--app-color) 30deg, transparent 120deg);
+}
+
+div::after {
+  width: 11.875rem;
+  height: 11.875rem;
+  display: flex;
+  font-size: large;
+  position: absolute;
+  border-radius: 10px;
+  letter-spacing: 5px;
+  align-items: center;
+  content: "Follow Me 😎";
+  justify-content: center;
+  color: var(--app-color);
+  background-color: #101010;
+  box-shadow: inset 1.25rem 1.25rem 1.25rem rgba(0, 0, 0, 0.549);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
